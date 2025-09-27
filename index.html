@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AR Планета</title>
+
+  <!-- Підключаємо останню версію model-viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <model-viewer
+    src="earthmars.glb"        <!-- твій GLB файл -->
+    ios-src="earthmars.usdz"   <!-- твій USDZ файл -->
+    alt="Планета"
+    ar
+    ar-modes="scene-viewer quick-look webxr"
+    camera-controls
+    auto-rotate
+    environment-image="neutral"
+    exposure="1"
+    shadow-intensity="1">
+  </model-viewer>
+
+</body>
+</html>
